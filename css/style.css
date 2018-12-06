@@ -1,0 +1,7 @@
+body, html, canvas {
+  margin: auto; /* Outer space of element, browser calculates margin with "auto" */
+  padding: 0px; /* Space inside border of above, "auto" not available with padding properties, so set to zero */
+  position: absolute; /* Un-fixed as not positioned to nearest viewport */
+  background-color: #668d3c; /* Background colour of consistent Pastel Green */
+  cursor: auto; /* "None" render cursor viewable on window, to view to replicate a users movement in demo, change to "auto" */
+}

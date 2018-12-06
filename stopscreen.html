@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <title>Thank You For Playing</title> <!-- Browser heading -->
+ 
+</head>
+
+<body background="background.png"> <!-- Consistent background to theme -->
+<!-- <body style="background-color:#668d3c;"> <!-- Pastel green background consistent to design colours -->
+
+<center> <!-- Center titles -->
+<h1>Thank you</h1>
+<h2>Please enjoy your day in St Andrews Park!</h2>
+<center/>
+
+<center> <!-- Centered logo image that links to external website of my Creative Technology Blog -->
+<a href="https://wiki.uwecreativetechnology.com/index.php?title=15003033_Blog"><img src="greenlogo.PNG" alt="Click for Further Information" width="500px" height="200px">
+<center/>
+
+<center> 
+<a href="startscreen.html"><img src="home.PNG" alt="Press to Start Again" width="210px" height="200px"> <!-- Links Home button to Menu/Start Screen -->
+</center>
+
+<h3> <!-- Center titles -->
+  Standby mode in... <span id="countdown">15</span> seconds <!-- Links to text countdown -->
+</h3>
+<!-- JavaScript part: code credit to https://gist.github.com/Joel-James/62d98e8cb3a1b6b05102 --> 
+<script type="text/javascript"> <!-- Defining coding language for script within HTML DOCTYPE -->
+    
+    //15 seconds to wait
+    var seconds = 15;
+    
+    function countdown() {
+        seconds = seconds - 1; //Reduces by 1 second at a time
+        if (seconds < 0) { //If reaches 0, redirects to standby screen
+            window.location = "standby.html"; //Redirection link
+        } else {
+            //Update remaining seconds
+            document.getElementById("countdown").innerHTML = seconds;
+            //Count down using javascript
+            window.setTimeout("countdown()", 1500); //Equanits to 15 seconds
+        }
+    }
+    
+    //Run countdown function
+    countdown();
+    
+</script>
+
+</html>
